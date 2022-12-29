@@ -1,0 +1,299 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tool="http://schemas.android.com/tools"
+    android:padding="10dp">
+
+    <TextView
+        android:id="@+id/tvNumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Number:"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvNumberValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tool:text="Number"
+        app:layout_constraintStart_toEndOf="@id/tvNumber"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginStart="5dp"/>
+
+    <TextView
+        android:id="@+id/tvScheme"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvNumber"
+        android:text="Scheme:" />
+
+    <TextView
+        android:id="@+id/tvSchemeValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tool:text="Scheme"
+        app:layout_constraintStart_toEndOf="@id/tvScheme"
+        app:layout_constraintTop_toBottomOf="@id/tvNumberValue"
+        android:layout_marginStart="5dp"/>
+
+    <TextView
+        android:id="@+id/tvType"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/tvScheme"
+        app:layout_constraintStart_toStartOf="parent"
+        android:text="Type:"/>
+
+    <TextView
+        android:id="@+id/tvTypeValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tool:text="Type"
+        app:layout_constraintStart_toEndOf="@id/tvType"
+        app:layout_constraintTop_toBottomOf="@id/tvSchemeValue"
+        android:layout_marginStart="5dp"/>
+
+    <TextView
+        android:id="@+id/tvBrand"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/tvType"
+        app:layout_constraintStart_toStartOf="parent"
+        android:text="Brand:"/>
+
+    <TextView
+        android:id="@+id/tvBrandValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tool:text="Brand"
+        app:layout_constraintStart_toEndOf="@id/tvBrand"
+        app:layout_constraintTop_toBottomOf="@id/tvTypeValue"
+        android:layout_marginStart="5dp"/>
+
+    <TextView
+        android:id="@+id/tvPrepaid"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/tvBrand"
+        app:layout_constraintStart_toStartOf="parent"
+        android:text="Prepaid:"/>
+
+    <TextView
+        android:id="@+id/tvPrepaidValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tool:text="Prepaid"
+        app:layout_constraintStart_toEndOf="@id/tvPrepaid"
+        app:layout_constraintTop_toBottomOf="@id/tvBrandValue"
+        android:layout_marginStart="5dp"/>
+
+    <TextView
+        android:id="@+id/tvCountry"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/tvPrepaid"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:text="COUNTRY"/>
+
+    <TextView
+        android:id="@+id/tvNumeric"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/tvCountry"
+        app:layout_constraintStart_toStartOf="parent"
+        android:text="Numeric:"/>
+
+    <TextView
+        android:id="@+id/tvNumericValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tool:text="Numeric"
+        app:layout_constraintStart_toEndOf="@id/tvNumeric"
+        app:layout_constraintTop_toBottomOf="@id/tvCountry"
+        android:layout_marginStart="5dp"/>
+
+    <TextView
+        android:id="@+id/tvAlpha"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/tvNumeric"
+        app:layout_constraintStart_toStartOf="parent"
+        android:text="Alpha2:"/>
+
+    <TextView
+        android:id="@+id/tvAlphaValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tool:text="Alpha"
+        app:layout_constraintStart_toEndOf="@id/tvAlpha"
+        app:layout_constraintTop_toBottomOf="@id/tvNumericValue"
+        android:layout_marginStart="5dp"/>
+
+    <TextView
+        android:id="@+id/tvName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/tvAlpha"
+        app:layout_constraintStart_toStartOf="parent"
+        android:text="Name:"/>
+
+    <TextView
+        android:id="@+id/tvNameValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tool:text="Name"
+        app:layout_constraintStart_toEndOf="@id/tvName"
+        app:layout_constraintTop_toBottomOf="@id/tvAlphaValue"
+        android:layout_marginStart="5dp"/>
+
+    <TextView
+        android:id="@+id/tvEmoji"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/tvName"
+        app:layout_constraintStart_toStartOf="parent"
+        android:text="Emoji:"/>
+
+    <TextView
+        android:id="@+id/tvEmojiValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tool:text="Emoji"
+        app:layout_constraintStart_toEndOf="@id/tvEmoji"
+        app:layout_constraintTop_toBottomOf="@id/tvNameValue"
+        android:layout_marginStart="5dp"/>
+
+    <TextView
+        android:id="@+id/tvCurrency"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/tvEmoji"
+        app:layout_constraintStart_toStartOf="parent"
+        android:text="Currency:"/>
+
+    <TextView
+        android:id="@+id/tvCurrencyValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tool:text="Currency"
+        app:layout_constraintStart_toEndOf="@id/tvCurrency"
+        app:layout_constraintTop_toBottomOf="@id/tvEmojiValue"
+        android:layout_marginStart="5dp"/>
+
+    <TextView
+        android:id="@+id/tvLatitude"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/tvCurrency"
+        app:layout_constraintStart_toStartOf="parent"
+        android:text="Latitude:"/>
+
+    <TextView
+        android:id="@+id/tvLatitudeValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tool:text="Latitude"
+        app:layout_constraintStart_toEndOf="@id/tvLatitude"
+        app:layout_constraintTop_toBottomOf="@id/tvCurrencyValue"
+        android:layout_marginStart="5dp"/>
+
+    <TextView
+        android:id="@+id/tvLongitude"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/tvLatitude"
+        app:layout_constraintStart_toStartOf="parent"
+        android:text="Longitude:"/>
+
+    <TextView
+        android:id="@+id/tvLongitudeValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tool:text="Longitude"
+        app:layout_constraintStart_toEndOf="@id/tvLongitude"
+        app:layout_constraintTop_toBottomOf="@id/tvLatitudeValue"
+        android:layout_marginStart="5dp"/>
+
+    <TextView
+        android:id="@+id/tvBank"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/tvLongitude"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:text="BANK"/>
+
+    <TextView
+        android:id="@+id/tvBankName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/tvBank"
+        app:layout_constraintStart_toStartOf="parent"
+        android:text="Name:"/>
+
+    <TextView
+        android:id="@+id/tvBankNameValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tool:text="BankName"
+        app:layout_constraintStart_toEndOf="@id/tvBankName"
+        app:layout_constraintTop_toBottomOf="@id/tvBank"
+        android:layout_marginStart="5dp"/>
+
+    <TextView
+        android:id="@+id/tvURL"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/tvBankName"
+        app:layout_constraintStart_toStartOf="parent"
+        android:text="URL:"/>
+
+    <TextView
+        android:id="@+id/tvURLValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tool:text="URL"
+        app:layout_constraintStart_toEndOf="@id/tvURL"
+        app:layout_constraintTop_toBottomOf="@id/tvBankNameValue"
+        android:layout_marginStart="5dp"/>
+
+    <TextView
+        android:id="@+id/tvPhone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/tvURL"
+        app:layout_constraintStart_toStartOf="parent"
+        android:text="Phone:"/>
+
+    <TextView
+        android:id="@+id/tvPhoneValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tool:text="Phone"
+        app:layout_constraintStart_toEndOf="@id/tvPhone"
+        app:layout_constraintTop_toBottomOf="@id/tvURLValue"
+        android:layout_marginStart="5dp"/>
+
+    <TextView
+        android:id="@+id/tvCity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/tvPhone"
+        app:layout_constraintStart_toStartOf="parent"
+        android:text="City:"/>
+
+    <TextView
+        android:id="@+id/tvCityValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tool:text="City"
+        app:layout_constraintStart_toEndOf="@id/tvCity"
+        app:layout_constraintTop_toBottomOf="@id/tvPhoneValue"
+        android:layout_marginStart="5dp"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
