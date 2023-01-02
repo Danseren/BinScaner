@@ -4,296 +4,379 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:tool="http://schemas.android.com/tools"
-    android:padding="10dp">
+    android:padding="@dimen/paddingMedium">
+
+    <TextView
+        android:id="@+id/tvCard"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/tvCard"
+        android:textSize="@dimen/textSizeMedium"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/tvNumber"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Number:"
+        android:text="@string/tvNumber"
+        android:textSize="@dimen/textSizeMedium"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/tvCard" />
 
     <TextView
         android:id="@+id/tvNumberValue"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        tool:text="Number"
+        android:layout_marginStart="@dimen/marginSmall"
+        android:textSize="@dimen/textSizeMedium"
+        app:layout_constraintBottom_toBottomOf="@+id/tvNumber"
         app:layout_constraintStart_toEndOf="@id/tvNumber"
-        app:layout_constraintTop_toTopOf="parent"
-        android:layout_marginStart="5dp"/>
+        app:layout_constraintTop_toTopOf="@+id/tvNumber"
+        tool:text="Number" />
+
+    <TextView
+        android:id="@+id/tvLength"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/tvLength"
+        android:textSize="@dimen/textSizeMedium"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvNumber" />
+
+    <TextView
+        android:id="@+id/tvLengthValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/marginSmall"
+        app:layout_constraintBottom_toBottomOf="@+id/tvLength"
+        app:layout_constraintStart_toEndOf="@id/tvLength"
+        app:layout_constraintTop_toTopOf="@+id/tvLength"
+        tool:text="Length" />
+
+    <TextView
+        android:id="@+id/tvLuhn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/tvLuhn"
+        android:textSize="@dimen/textSizeMedium"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvLength" />
+
+    <TextView
+        android:id="@+id/tvLuhnValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/marginSmall"
+        app:layout_constraintBottom_toBottomOf="@+id/tvLuhn"
+        app:layout_constraintStart_toEndOf="@id/tvLuhn"
+        app:layout_constraintTop_toTopOf="@+id/tvLuhn"
+        tool:text="Luhn" />
 
     <TextView
         android:id="@+id/tvScheme"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:text="@string/tvScheme"
+        android:textSize="@dimen/textSizeMedium"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tvNumber"
-        android:text="Scheme:" />
+        app:layout_constraintTop_toBottomOf="@id/tvLuhn" />
 
     <TextView
         android:id="@+id/tvSchemeValue"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        tool:text="Scheme"
+        android:layout_marginStart="@dimen/marginSmall"
+        app:layout_constraintBottom_toBottomOf="@+id/tvScheme"
         app:layout_constraintStart_toEndOf="@id/tvScheme"
-        app:layout_constraintTop_toBottomOf="@id/tvNumberValue"
-        android:layout_marginStart="5dp"/>
+        app:layout_constraintTop_toTopOf="@+id/tvScheme"
+        tool:text="Scheme" />
 
     <TextView
         android:id="@+id/tvType"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@id/tvScheme"
+        android:text="@string/tvType"
+        android:textSize="@dimen/textSizeMedium"
         app:layout_constraintStart_toStartOf="parent"
-        android:text="Type:"/>
+        app:layout_constraintTop_toBottomOf="@id/tvScheme" />
 
     <TextView
         android:id="@+id/tvTypeValue"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        tool:text="Type"
+        android:layout_marginStart="@dimen/marginSmall"
+        app:layout_constraintBottom_toTopOf="@+id/tvBrand"
         app:layout_constraintStart_toEndOf="@id/tvType"
-        app:layout_constraintTop_toBottomOf="@id/tvSchemeValue"
-        android:layout_marginStart="5dp"/>
+        app:layout_constraintTop_toTopOf="@+id/tvType"
+        tool:text="Type" />
 
     <TextView
         android:id="@+id/tvBrand"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:textSize="@dimen/textSizeMedium"
         app:layout_constraintTop_toBottomOf="@id/tvType"
         app:layout_constraintStart_toStartOf="parent"
-        android:text="Brand:"/>
+        android:text="@string/tvBrand"/>
 
     <TextView
         android:id="@+id/tvBrandValue"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        tool:text="Brand"
+        android:layout_marginStart="@dimen/marginSmall"
+        app:layout_constraintBottom_toBottomOf="@+id/tvBrand"
         app:layout_constraintStart_toEndOf="@id/tvBrand"
-        app:layout_constraintTop_toBottomOf="@id/tvTypeValue"
-        android:layout_marginStart="5dp"/>
+        app:layout_constraintTop_toTopOf="@+id/tvBrand"
+        tool:text="Brand" />
 
     <TextView
         android:id="@+id/tvPrepaid"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:textSize="@dimen/textSizeMedium"
         app:layout_constraintTop_toBottomOf="@id/tvBrand"
         app:layout_constraintStart_toStartOf="parent"
-        android:text="Prepaid:"/>
+        android:text="@string/tvPrepaid"/>
 
     <TextView
         android:id="@+id/tvPrepaidValue"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        tool:text="Prepaid"
+        android:layout_marginStart="@dimen/marginSmall"
+        app:layout_constraintBottom_toBottomOf="@+id/tvPrepaid"
         app:layout_constraintStart_toEndOf="@id/tvPrepaid"
-        app:layout_constraintTop_toBottomOf="@id/tvBrandValue"
-        android:layout_marginStart="5dp"/>
+        app:layout_constraintTop_toTopOf="@+id/tvPrepaid"
+        tool:text="Prepaid" />
 
     <TextView
         android:id="@+id/tvCountry"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:textSize="@dimen/textSizeMedium"
         app:layout_constraintTop_toBottomOf="@id/tvPrepaid"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        android:text="COUNTRY"/>
+        android:text="@string/tvCountry"/>
 
     <TextView
         android:id="@+id/tvNumeric"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:textSize="@dimen/textSizeMedium"
         app:layout_constraintTop_toBottomOf="@id/tvCountry"
         app:layout_constraintStart_toStartOf="parent"
-        android:text="Numeric:"/>
+        android:text="@string/tvNumeric"/>
 
     <TextView
         android:id="@+id/tvNumericValue"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        tool:text="Numeric"
+        android:layout_marginStart="@dimen/marginSmall"
+        app:layout_constraintBottom_toBottomOf="@+id/tvNumeric"
         app:layout_constraintStart_toEndOf="@id/tvNumeric"
-        app:layout_constraintTop_toBottomOf="@id/tvCountry"
-        android:layout_marginStart="5dp"/>
+        app:layout_constraintTop_toTopOf="@+id/tvNumeric"
+        tool:text="Numeric" />
 
     <TextView
         android:id="@+id/tvAlpha"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:textSize="@dimen/textSizeMedium"
         app:layout_constraintTop_toBottomOf="@id/tvNumeric"
         app:layout_constraintStart_toStartOf="parent"
-        android:text="Alpha2:"/>
+        android:text="@string/tvAlpha"/>
 
     <TextView
         android:id="@+id/tvAlphaValue"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        tool:text="Alpha"
+        android:layout_marginStart="@dimen/marginSmall"
+        app:layout_constraintBottom_toBottomOf="@+id/tvAlpha"
         app:layout_constraintStart_toEndOf="@id/tvAlpha"
-        app:layout_constraintTop_toBottomOf="@id/tvNumericValue"
-        android:layout_marginStart="5dp"/>
+        app:layout_constraintTop_toBottomOf="@+id/tvNumeric"
+        tool:text="Alpha" />
 
     <TextView
         android:id="@+id/tvName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:textSize="@dimen/textSizeMedium"
         app:layout_constraintTop_toBottomOf="@id/tvAlpha"
         app:layout_constraintStart_toStartOf="parent"
-        android:text="Name:"/>
+        android:text="@string/tvName"/>
 
     <TextView
         android:id="@+id/tvNameValue"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        tool:text="Name"
+        android:layout_marginStart="@dimen/marginSmall"
+        app:layout_constraintBottom_toBottomOf="@+id/tvName"
         app:layout_constraintStart_toEndOf="@id/tvName"
-        app:layout_constraintTop_toBottomOf="@id/tvAlphaValue"
-        android:layout_marginStart="5dp"/>
+        app:layout_constraintTop_toBottomOf="@+id/tvAlpha"
+        tool:text="Name" />
 
     <TextView
         android:id="@+id/tvEmoji"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:textSize="@dimen/textSizeMedium"
         app:layout_constraintTop_toBottomOf="@id/tvName"
         app:layout_constraintStart_toStartOf="parent"
-        android:text="Emoji:"/>
+        android:text="@string/tvEmoji"/>
 
     <TextView
         android:id="@+id/tvEmojiValue"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        tool:text="Emoji"
+        android:layout_marginStart="@dimen/marginSmall"
+        app:layout_constraintBottom_toBottomOf="@+id/tvEmoji"
         app:layout_constraintStart_toEndOf="@id/tvEmoji"
-        app:layout_constraintTop_toBottomOf="@id/tvNameValue"
-        android:layout_marginStart="5dp"/>
+        app:layout_constraintTop_toBottomOf="@+id/tvName"
+        tool:text="Emoji" />
 
     <TextView
         android:id="@+id/tvCurrency"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:textSize="@dimen/textSizeMedium"
         app:layout_constraintTop_toBottomOf="@id/tvEmoji"
         app:layout_constraintStart_toStartOf="parent"
-        android:text="Currency:"/>
+        android:text="@string/tvCurrency"/>
 
     <TextView
         android:id="@+id/tvCurrencyValue"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        tool:text="Currency"
+        android:layout_marginStart="@dimen/marginSmall"
+        app:layout_constraintBottom_toBottomOf="@+id/tvCurrency"
         app:layout_constraintStart_toEndOf="@id/tvCurrency"
-        app:layout_constraintTop_toBottomOf="@id/tvEmojiValue"
-        android:layout_marginStart="5dp"/>
+        app:layout_constraintTop_toTopOf="@+id/tvCurrency"
+        tool:text="Currency" />
 
     <TextView
         android:id="@+id/tvLatitude"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@id/tvCurrency"
+        android:text="@string/tvLatitude"
+        android:textSize="@dimen/textSizeMedium"
         app:layout_constraintStart_toStartOf="parent"
-        android:text="Latitude:"/>
+        app:layout_constraintTop_toBottomOf="@id/tvCurrency" />
 
     <TextView
         android:id="@+id/tvLatitudeValue"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        tool:text="Latitude"
+        android:layout_marginStart="@dimen/marginSmall"
+        app:layout_constraintBottom_toBottomOf="@+id/tvLatitude"
         app:layout_constraintStart_toEndOf="@id/tvLatitude"
-        app:layout_constraintTop_toBottomOf="@id/tvCurrencyValue"
-        android:layout_marginStart="5dp"/>
+        app:layout_constraintTop_toTopOf="@+id/tvLatitude"
+        tool:text="Latitude" />
 
     <TextView
         android:id="@+id/tvLongitude"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:textSize="@dimen/textSizeMedium"
         app:layout_constraintTop_toBottomOf="@id/tvLatitude"
         app:layout_constraintStart_toStartOf="parent"
-        android:text="Longitude:"/>
+        android:text="@string/tvLongitude"/>
 
     <TextView
         android:id="@+id/tvLongitudeValue"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        tool:text="Longitude"
+        android:layout_marginStart="@dimen/marginSmall"
+        app:layout_constraintBottom_toBottomOf="@+id/tvLongitude"
         app:layout_constraintStart_toEndOf="@id/tvLongitude"
-        app:layout_constraintTop_toBottomOf="@id/tvLatitudeValue"
-        android:layout_marginStart="5dp"/>
+        app:layout_constraintTop_toBottomOf="@+id/tvLatitude"
+        tool:text="Longitude" />
 
     <TextView
         android:id="@+id/tvBank"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:textSize="@dimen/textSizeMedium"
         app:layout_constraintTop_toBottomOf="@id/tvLongitude"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        android:text="BANK"/>
+        android:text="@string/tvBank"/>
 
     <TextView
         android:id="@+id/tvBankName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:textSize="@dimen/textSizeMedium"
         app:layout_constraintTop_toBottomOf="@id/tvBank"
         app:layout_constraintStart_toStartOf="parent"
-        android:text="Name:"/>
+        android:text="@string/tvBankName"/>
 
     <TextView
         android:id="@+id/tvBankNameValue"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        tool:text="BankName"
+        android:layout_marginStart="@dimen/marginSmall"
+        app:layout_constraintBottom_toBottomOf="@+id/tvBankName"
         app:layout_constraintStart_toEndOf="@id/tvBankName"
-        app:layout_constraintTop_toBottomOf="@id/tvBank"
-        android:layout_marginStart="5dp"/>
+        app:layout_constraintTop_toTopOf="@+id/tvBankName"
+        tool:text="BankName" />
 
     <TextView
         android:id="@+id/tvURL"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:textSize="@dimen/textSizeMedium"
         app:layout_constraintTop_toBottomOf="@id/tvBankName"
         app:layout_constraintStart_toStartOf="parent"
-        android:text="URL:"/>
+        android:text="@string/tvURL"/>
 
     <TextView
         android:id="@+id/tvURLValue"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        tool:text="URL"
+        android:layout_marginStart="@dimen/marginSmall"
+        app:layout_constraintBottom_toBottomOf="@+id/tvURL"
         app:layout_constraintStart_toEndOf="@id/tvURL"
-        app:layout_constraintTop_toBottomOf="@id/tvBankNameValue"
-        android:layout_marginStart="5dp"/>
+        app:layout_constraintTop_toBottomOf="@+id/tvBankName"
+        tool:text="URL" />
 
     <TextView
         android:id="@+id/tvPhone"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:textSize="@dimen/textSizeMedium"
         app:layout_constraintTop_toBottomOf="@id/tvURL"
         app:layout_constraintStart_toStartOf="parent"
-        android:text="Phone:"/>
+        android:text="@string/tvPhone"/>
 
     <TextView
         android:id="@+id/tvPhoneValue"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        tool:text="Phone"
+        android:layout_marginStart="@dimen/marginSmall"
+        app:layout_constraintBottom_toBottomOf="@+id/tvPhone"
         app:layout_constraintStart_toEndOf="@id/tvPhone"
-        app:layout_constraintTop_toBottomOf="@id/tvURLValue"
-        android:layout_marginStart="5dp"/>
+        app:layout_constraintTop_toTopOf="@+id/tvPhone"
+        tool:text="Phone" />
 
     <TextView
         android:id="@+id/tvCity"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:textSize="@dimen/textSizeMedium"
         app:layout_constraintTop_toBottomOf="@id/tvPhone"
         app:layout_constraintStart_toStartOf="parent"
-        android:text="City:"/>
+        android:text="@string/tvCity"/>
 
     <TextView
         android:id="@+id/tvCityValue"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        tool:text="City"
+        android:layout_marginStart="@dimen/marginSmall"
+        app:layout_constraintBottom_toBottomOf="@+id/tvCity"
         app:layout_constraintStart_toEndOf="@id/tvCity"
-        app:layout_constraintTop_toBottomOf="@id/tvPhoneValue"
-        android:layout_marginStart="5dp"/>
+        app:layout_constraintTop_toTopOf="@+id/tvCity"
+        tool:text="City" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

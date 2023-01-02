@@ -1,4 +1,25 @@
 <resources>
     <string name="app_name">BinScaner</string>
     <string name="tv_bin">BIN:</string>
+    <string name="tvNumber">NUMBER:</string>
+    <string name="tvScheme">SCHEME:</string>
+    <string name="tvType">TYPE:</string>
+    <string name="tvBrand">BRAND:</string>
+    <string name="tvPrepaid">PREPAID:</string>
+    <string name="tvCountry">COUNTRY</string>
+    <string name="tvNumeric">NUMERIC:</string>
+    <string name="tvAlpha">ALPHA2:</string>
+    <string name="tvName">NAME:</string>
+    <string name="tvEmoji">EMOJI:</string>
+    <string name="tvCurrency">CURRENCY:</string>
+    <string name="tvLatitude">LATITUDE:</string>
+    <string name="tvLongitude">LONGITUDE:</string>
+    <string name="tvBank">BANK</string>
+    <string name="tvBankName">NAME:</string>
+    <string name="tvURL">URL:</string>
+    <string name="tvPhone">PHONE:</string>
+    <string name="tvCity">CITY:</string>
+    <string name="tvCard">CARD</string>
+    <string name="tvLength">LENGTH:</string>
+    <string name="tvLuhn">LUHN:</string>
 </resources>

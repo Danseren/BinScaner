@@ -3,6 +3,7 @@ package ru.sample.store.binscaner
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import ru.sample.store.binscaner.databinding.ActivityMainBinding
+import ru.sample.store.binscaner.view.MainFragment
 
 class MainActivity : AppCompatActivity() {
 

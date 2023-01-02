@@ -1,4 +1,4 @@
-package ru.sample.store.binscaner
+package ru.sample.store.binscaner.view
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -6,8 +6,12 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
+import androidx.lifecycle.ViewModelProvider
+import ru.sample.store.binscaner.R
 import ru.sample.store.binscaner.databinding.FragmentMainBinding
+import ru.sample.store.binscaner.viewmodel.InfoViewModel
 
+@Suppress("CAST_NEVER_SUCCEEDS")
 class MainFragment : Fragment() {
 
     private var _binding: FragmentMainBinding? = null
@@ -15,6 +19,10 @@ class MainFragment : Fragment() {
 
     companion object {
         fun newInstance() = MainFragment()
+    }
+
+    private val viewModel by lazy {
+        ViewModelProvider(this).get(InfoViewModel::class.java)
     }
 
     override fun onCreateView(
@@ -30,10 +38,12 @@ class MainFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         binding.textField.setEndIconOnClickListener {
+
+            val newA = binding.inputEditText.text.toString()
             val activity = context as AppCompatActivity
             activity.supportFragmentManager
                 .beginTransaction()
-                .replace(R.id.containerMain, BinInfoFragment.newInstance())
+                .replace(R.id.containerMain, BinInfoFragment.newInstance(newA))
                 .addToBackStack(null)
                 .commit()
         }
