@@ -4,6 +4,7 @@ import com.google.gson.Gson
 import okhttp3.*
 import ru.sample.store.binscaner.BINLIST_API_KEY
 import ru.sample.store.binscaner.BIN_URL
+import ru.sample.store.binscaner.Bin
 import ru.sample.store.binscaner.FAILURE_EX
 import ru.sample.store.binscaner.model.dto.BinDTO
 import java.io.IOException
